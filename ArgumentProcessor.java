@@ -10,7 +10,7 @@ public class ArgumentProcessor {
         this.args = args;
     }
 
-    public void printArgumentInfo() {
+    public void printArgsInfo() {
         ArrayList<String> urls = new ArrayList<>();
         urls.addAll(Arrays.asList(args));
 
