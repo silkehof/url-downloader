@@ -1,9 +1,12 @@
+import java.util.HashMap;
+
 public class Downloader {
     public static void main(String[] args) {
-        //ArgumentProcessor argsProcessor = new ArgumentProcessor(args);
+        ArgumentProcessor argsProcessor = new ArgumentProcessor(args);
+        HashMap<String, String> config = argsProcessor.getConfigMap();
         // argsProcessor.printArgsInfo();
 
-        String inputUrl = args[0];
+        String inputUrl = config.get("url");
         UrlFetcher urlFetcher = new UrlFetcher(inputUrl);
         urlFetcher.downloadAndSaveToFileUrl();
     }
